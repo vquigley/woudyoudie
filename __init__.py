@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 import pickle as pkl
 
 app = Flask(__name__)
-app.debug = True
+
 clr = pkl.load(open('data/data.pkl','r'))
 fare_scaler = pkl.load(open('data/fare_scaler.pkl','r'))
 class_scaler = pkl.load(open('data/class_scaler.pkl','r'))

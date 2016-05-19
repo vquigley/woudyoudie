@@ -7,22 +7,6 @@ function predict() {
     
     console.log(data);
     var result = data.result;    
-    var target = $('#target').val();
-    var status_id;
-    if (target == '') {
-      status_id = '';
-    } else if (target == result) {
-      status_id = 'correct';
-    } else {
-      status_id = 'incorrect';
-    }
-
-    if (debug) { 
-      $("#result").append(mapping[index]);
-      index++;
-      $("#target").val($("#target").val() + "[" + image_vector + "], ");
-    } else {
-      $('#result').append('<span id=\'' + status_id + '\'>' + result + '</span>');
-    }
+    $('#result').text(result);
   });
 }
