@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbb2e02b-2695-476b-b2b9-5e6af715f5e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/predict.js" afterPath="$PROJECT_DIR$/static/scripts/predict.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Procfile.txt" afterPath="$PROJECT_DIR$/Procfile" />
     </list>
     <ignored path="titanic_flask.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,8 +107,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Procfile.txt">
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
@@ -537,7 +534,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile.txt">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
