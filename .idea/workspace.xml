@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbb2e02b-2695-476b-b2b9-5e6af715f5e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi.py" afterPath="$PROJECT_DIR$/wsgi.py" />
-    </list>
+    <list default="true" id="fbb2e02b-2695-476b-b2b9-5e6af715f5e8" name="Default" comment="" />
     <ignored path="titanic_flask.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
