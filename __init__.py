@@ -7,12 +7,14 @@ clr = pkl.load(open('data/data.pkl','r'))
 fare_scaler = pkl.load(open('data/fare_scaler.pkl','r'))
 class_scaler = pkl.load(open('data/class_scaler.pkl','r'))
 
+
 @app.route('/')
 def index():
     """
     Uses Flask's Jinja2 template renderer to generate the html
     """
     return render_template('index.html')
+
 
 @app.route('/predict/')
 def predict():
