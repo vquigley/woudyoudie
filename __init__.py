@@ -4,6 +4,7 @@ import os
 
 app = Flask(__name__)
 
+
 clr = pkl.load(open('data/data.pkl','r'))
 fare_scaler = pkl.load(open('data/fare_scaler.pkl','r'))
 class_scaler = pkl.load(open('data/class_scaler.pkl','r'))
