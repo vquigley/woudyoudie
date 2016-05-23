@@ -29,8 +29,27 @@
  </head>
 <body>
   <h1>Would you survive the Titanic?</h1>
-  <button onclick="predict()">Identify</button>
-  Target: <input type='text' id='target'/>
+  Class:
+  <select id='pClass'>
+    <option value="3">1st</option>
+    <option value="2">2nd</option>
+    <option value="1">3rd</option>
+  </select> <br />
+  Gender:
+  <select type='' id='sex'>
+    <option value="1">Male</option>
+    <option value="0">Female</option>
+  </select> <br />
+  Age: <input type="number" id="age" /> <br />
+  Number of siblings on board: <input type="number" id="sibSp" /> <br />
+  Number of parents and/or children on board: <input type="number" id="parch" /> <br />
+  Where did you embark from:
+  <select type='' id='embarked'>
+    <option value="0">Cherbourg</option>
+    <option value="1">Queenstown</option>
+    <option value="2">Southampton</option>
+  </select> <br />
+  <button onclick="predict()">Predict</button>
   <h3 id='result'></h3>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='scripts/predict.js') }}"></script>

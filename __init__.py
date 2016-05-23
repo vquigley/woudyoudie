@@ -20,21 +20,23 @@ def index():
 
 @app.route('/predict/')
 def predict():
-    pClass = request.args.get('Pclass')
+    pClass = float(request.args.get('Pclass'))
     name = request.args.get('Name')
-    age = request.args.get('Age')
-    sex = request.args.get('Sex')
-    sibSp = request.args.get('SibSp')
-    parch = request.args.get('Parch')
-    fare = request.args.get('Fare')
-    embarked = request.args.get('Embarked')
-    scaled_fare = fare_scaler.transform([[fare]])
-    scaled_class = class_scaler.transform([[pClass]])
-    print scaled_fare
-    prediction = clr.predict([sex, age, sibSp, parch, embarked, scaled_class + scaled_fare])
+    age = float(request.args.get('Age'))
+    sex = float(request.args.get('Sex'))
+    sibSp = float(request.args.get('SibSp'))
+    parch = float(request.args.get('Parch'))
+    fare = float(request.args.get('Fare'))
+    embarked = float(request.args.get('Embarked'))
+    scaled_fare = fare_scaler.transform([fare])
+    scaled_class = class_scaler.transform([pClass])
+
+    values = [sex, age, sibSp, parch, embarked, (scaled_class + scaled_fare)[0]]
+    print values
+    prediction = clr.predict(values)
     return jsonify(result=prediction[0])
 
 if __name__ == '__main__':
     print "__main__"
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0', port=port)
