@@ -1,15 +1,6 @@
 var debug = false;
 
 function predict() {
-  //Pclass, Name, Sex, Age, SibSp, Parch, Fare, Embarked
-  //Ports {'Q': 1, 'C': 0, 'S': 2}
-  if (isNaN($("#siblings").val()) ||
-        isNaN($("#spouse").val()) ||
-        isNaN($("#parents").val()) ||
-        isNaN($("#children").val())) {
-    changeStatus("need-input");
-    return;
-  }
 
   var params = {
     Pclass: $("#pClass").val(),
@@ -20,7 +11,7 @@ function predict() {
     Fare: getFare(pClass),
     Embarked: $('#embarked').val()
   };
-  console.log(params);
+
   changeStatus("loading");
 
   $.getJSON('predict', params, result);
