@@ -13,7 +13,9 @@ function predict() {
     Embarked: $('#embarked').val()
   };
 
-  //$.getJSON('predict?Pclass=3&Name=noCare&Sex=0&Age=22&SibSp=1&Parch=0&Fare=7.25&Embarked=2', function(data) {
+  if (!params.Age || !params.SibSp || !params.Parch)
+    $('#result').text("Please fill in all parts of the quiz.");
+    
   $.getJSON('predict', params, result);
 }
 
