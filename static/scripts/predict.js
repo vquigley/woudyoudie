@@ -3,22 +3,25 @@ var debug = false;
 function predict() {
   //Pclass, Name, Sex, Age, SibSp, Parch, Fare, Embarked
   //Ports {'Q': 1, 'C': 0, 'S': 2}
-  var params = {
-    Pclass: $("#pClass").val(),
-    Sex: $("#sex").val(),
-    Age: $("#age").val(),
-    SibSp: $("#sibSp").val(),
-    Parch: $("#parch").val(),
-    Fare: getFare(pClass),
-    Embarked: $('#embarked').val()
-  };
-
-  changeStatus("loading");
-
-  if (!params.Age || !params.SibSp || !params.Parch) {
+  if (isNaN($("#siblings").val()) ||
+        isNaN($("#spouse").val()) ||
+        isNaN($("#parents").val()) ||
+        isNaN($("#children").val())) {
     changeStatus("need-input");
     return;
   }
+
+  var params = {
+    Pclass: $("#pClass").val(),
+    Sex: $("#sex").val(),
+    Age: Number($("#age").val()),
+    SibSp: Number($("#siblings").val()) + Number($("#spouse").val()),
+    Parch: Number($("#parents").val()) + Number($("#children").val()),
+    Fare: getFare(pClass),
+    Embarked: $('#embarked').val()
+  };
+  console.log(params);
+  changeStatus("loading");
 
   $.getJSON('predict', params, result);
 }

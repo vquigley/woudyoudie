@@ -71,7 +71,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Would you have survived the titanic?</h1>
+                <h1>Would you die if you were on the titanic?</h1>
                 <hr>
                 <a href="#quiz" class="btn btn-primary btn-xl page-scroll">Take Quiz</a>
                 <hr>
@@ -107,12 +107,23 @@
                         <input type="number" class="form-control" id="age">
                       </div>
                       <div class="form-group">
-                        <label for="parch">Number of parents and children on board</label>
-                        <input type="number" class="form-control" id="parch">
+                        <label for="parents">Number of parents on board</label>
+                        <input type="number" class="form-control" id="parents">
+                      </div>
+                        <div class="form-group">
+                        <label for="children">Number of children on board</label>
+                        <input type="number" class="form-control" id="children">
                       </div>
                       <div class="form-group">
-                        <label for="sibSp">Number of siblings (brothers and sisters) and spouses (husband or wife) on board</label>
-                        <input type="number" class="form-control" id="sibSp">
+                        <label for="siblings">Number of siblings (brothers and sisters) on board</label>
+                        <input type="number" class="form-control" id="siblings">
+                      </div>
+                        <div class="form-group">
+                        <label for="spouse">Do you have a spouse (husband or wife) on board</label>
+                        <select class="form-control" id='spouse'>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                          </select>
                       </div>
                       <div class="form-group">
                         <label for="embarked">Where did you embark from</label>
