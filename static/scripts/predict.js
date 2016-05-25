@@ -20,7 +20,7 @@ function predict() {
 function result(data) {
     console.log(data);
     var result = data.result;
-    $('#result').text(result);
+    $('#result').text(result ? "Survived" : "Died");
 }
 
 function getFare(pClass) {
