@@ -17,6 +17,12 @@ def index():
     """
     return render_template('index.html')
 
+@app.route('/boot')
+def index2():
+    """
+    Uses Flask's Jinja2 template renderer to generate the html
+    """
+    return render_template('index2.html')
 
 @app.route('/predict/')
 def predict():
@@ -32,7 +38,6 @@ def predict():
     scaled_class = class_scaler.transform([pClass])
 
     values = [sex, age, sibSp, parch, embarked, (scaled_class + scaled_fare)[0]]
-    print values
     prediction = clr.predict(values)
     return jsonify(result=prediction[0])
 
