@@ -15,13 +15,6 @@ def index():
     """
     Uses Flask's Jinja2 template renderer to generate the html
     """
-    return render_template('index.html')
-
-@app.route('/boot')
-def index2():
-    """
-    Uses Flask's Jinja2 template renderer to generate the html
-    """
     return render_template('index2.html')
 
 @app.route('/predict/')
